@@ -1,0 +1,1076 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.animation {
+  background-color: #131313;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+
+.animation #topHeading {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  color: #fff;
+  position: absolute;
+  top: 5%;
+  left: 44%;
+  font-size: 3em;
+  opacity: 0;
+  color: #ffffff;
+  text-shadow: 4px 3px 2px #000000, 4px 3px 2px #000000;
+  -webkit-animation: intro 3s ease-out forwards 10.5s;
+          animation: intro 3s ease-out forwards 10.5s;
+}
+
+.animation #bottomHeading {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  color: #fff;
+  position: absolute;
+  top: 68%;
+  left: 28%;
+  font-size: 3em;
+  opacity: 0;
+  text-shadow: 4px 3px 2px #000000, 4px 3px 2px #000000;
+  -webkit-animation: intro 3s ease-out forwards 10.5s;
+          animation: intro 3s ease-out forwards 10.5s;
+}
+
+@-webkit-keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation .svg {
+  position: absolute;
+  top: 36%;
+  left: 53%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.animation button {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 80%;
+  left: 42%;
+  font-size: 1.1em;
+  background: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+  width: 13%;
+  height: 8%;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 6px #000000;
+          box-shadow: 6px 6px 6px #000000;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  -webkit-animation: button 2s ease-in forwards 10s;
+          animation: button 2s ease-in forwards 10s;
+}
+
+.animation button:hover {
+  background: #50b5d2;
+  border: solid 15px #50b5d2;
+}
+
+.animation button .arrowBtn {
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.animation button:hover .arrowBtn {
+  -webkit-animation: bounce 0.8s linear infinite 0.1s, infiniteSpin 0.9s linear infinite 2.9s;
+          animation: bounce 0.8s linear infinite 0.1s, infiniteSpin 0.9s linear infinite 2.9s;
+}
+
+.animation button:focus {
+  outline: none;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@-webkit-keyframes infiniteSpin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes infiniteSpin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes button {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.firstName {
+  -webkit-animation: firstNameFill 1s ease-out forwards 9.5s;
+          animation: firstNameFill 1s ease-out forwards 9.5s;
+}
+
+#firstH {
+  stroke-dasharray: 21em;
+  stroke-dashoffset: 21em;
+  -webkit-animation: script 3s ease-out forwards 5.3s;
+          animation: script 3s ease-out forwards 5.3s;
+}
+
+#firstR {
+  stroke-dasharray: 12em;
+  stroke-dashoffset: 12em;
+  -webkit-animation: script 3s ease-out forwards 5.6s;
+          animation: script 3s ease-out forwards 5.6s;
+}
+
+#firstI {
+  stroke-dasharray: 11em;
+  stroke-dashoffset: 11em;
+  -webkit-animation: script 3s ease-out forwards 5.9s;
+          animation: script 3s ease-out forwards 5.9s;
+}
+
+#firstS {
+  stroke-dasharray: 11em;
+  stroke-dashoffset: 11em;
+  -webkit-animation: script 3s ease-out forwards 6.2s;
+          animation: script 3s ease-out forwards 6.2s;
+}
+
+@-webkit-keyframes firstNameFill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #42bd9a;
+  }
+}
+
+@keyframes firstNameFill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #42bd9a;
+  }
+}
+
+.lastName {
+  -webkit-animation: lastNameFill 1s ease-out forwards 9.5s;
+          animation: lastNameFill 1s ease-out forwards 9.5s;
+}
+
+#firstLastO {
+  stroke-dasharray: 12em;
+  stroke-dashoffset: 12em;
+  -webkit-animation: script 3s ease-out forwards 5.3s;
+          animation: script 3s ease-out forwards 5.3s;
+}
+
+#firstLastR {
+  stroke-dasharray: 12em;
+  stroke-dashoffset: 12em;
+  -webkit-animation: script 3s ease-out forwards 5.6s;
+          animation: script 3s ease-out forwards 5.6s;
+}
+
+#lastD {
+  stroke-dasharray: 17em;
+  stroke-dashoffset: 17em;
+  -webkit-animation: script 3s ease-out forwards 5.9s;
+          animation: script 3s ease-out forwards 5.9s;
+}
+
+#lastE {
+  stroke-dasharray: 13em;
+  stroke-dashoffset: 13em;
+  -webkit-animation: script 3s ease-out forwards 6.2s;
+          animation: script 3s ease-out forwards 6.2s;
+}
+
+#secondLastR {
+  stroke-dasharray: 12em;
+  stroke-dashoffset: 12em;
+  -webkit-animation: script 3s ease-out forwards 6.5s;
+          animation: script 3s ease-out forwards 6.5s;
+}
+
+#secondLastO {
+  stroke-dasharray: 12em;
+  stroke-dashoffset: 12em;
+  -webkit-animation: script 3s ease-out forwards 6.8s;
+          animation: script 3s ease-out forwards 6.8s;
+}
+
+@-webkit-keyframes lastNameFill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #42bd9a;
+  }
+}
+
+@keyframes lastNameFill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #42bd9a;
+  }
+}
+
+@-webkit-keyframes script {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes script {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#line {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation: lineFlip 4s linear forwards;
+          animation: lineFlip 4s linear forwards;
+}
+
+@-webkit-keyframes lineFlip {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  35% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  45% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  55% {
+    -webkit-transform: rotate(150deg);
+            transform: rotate(150deg);
+  }
+  60% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  65% {
+    -webkit-transform: rotate(210deg);
+            transform: rotate(210deg);
+  }
+  70% {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  75% {
+    -webkit-transform: rotate(280deg);
+            transform: rotate(280deg);
+  }
+  85% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lineFlip {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  35% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  45% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  55% {
+    -webkit-transform: rotate(150deg);
+            transform: rotate(150deg);
+  }
+  60% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  65% {
+    -webkit-transform: rotate(210deg);
+            transform: rotate(210deg);
+  }
+  70% {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  75% {
+    -webkit-transform: rotate(280deg);
+            transform: rotate(280deg);
+  }
+  85% {
+    -webkit-transform: rotate(310deg);
+            transform: rotate(310deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#firstC {
+  opacity: 0;
+  -webkit-animation: appearance 2s linear forwards 4.2s;
+          animation: appearance 2s linear forwards 4.2s;
+}
+
+#lastC {
+  opacity: 0;
+  -webkit-animation: appearance 2s linear forwards 4.2s;
+          animation: appearance 2s linear forwards 4.2s;
+}
+
+@-webkit-keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #04060f;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75), 0px 1px 4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75), 0px 1px 4px rgba(0, 0, 0, 0.75);
+  z-index: 5;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header li {
+  list-style-type: none;
+  padding: 0 1em;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25em;
+  color: #fff;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+header li:hover {
+  color: #42bd9a;
+}
+
+header li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1em;
+  background: #41badb;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+header li:hover::after {
+  width: 100%;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#aboutMe {
+  margin-top: 5em;
+}
+
+#aboutMe h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#aboutMe h1::after {
+  content: "";
+  display: block;
+  width: 12%;
+  height: 0.1em;
+  margin-left: 44%;
+  background: #41badb;
+}
+
+#aboutMe #profile {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5em auto 0 auto;
+  width: 80%;
+}
+
+#aboutMe #profile #meSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(45deg, #181818, 52%, #4caac4 75%);
+  -webkit-box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.75);
+          box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.75);
+  height: 100%;
+}
+
+#aboutMe #profile img {
+  border-radius: 25em;
+  margin-bottom: 0.65em;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#aboutMe #profile h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7em;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#aboutMe #profile h2::after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 0.1em;
+  margin-left: 8%;
+  background: #41badb;
+}
+
+#aboutMe #profile p {
+  font-family: "Raleway", sans-serif;
+  width: 85%;
+  text-align: justify;
+  font-size: 1.25em;
+  color: #333;
+  border: solid 4px #42bd9a;
+  padding: 2em;
+  font-weight: 600;
+}
+
+#skillsTitle {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25em;
+  color: #333;
+  margin-top: 3em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#skillsTitle::after {
+  content: "";
+  display: block;
+  width: 8.5%;
+  height: 0.1em;
+  margin-left: 45.5%;
+  background: #41badb;
+}
+
+.langLogo {
+  text-align: center;
+  margin: 2em 0;
+  background: #333;
+  width: 100%;
+  height: 10em;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5), 0px -4px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5), 0px -4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.langLogo svg {
+  width: 6.5%;
+  height: auto;
+  margin: 1.85em 2em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.langLogo svg:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.reactLogo circle {
+  position: absolute;
+  top: 20%;
+}
+
+#portfolio {
+  margin-top: 6em;
+}
+
+#portfolio h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#portfolio h1::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 0.1em;
+  margin-left: 45%;
+  background: #41badb;
+}
+
+@-webkit-keyframes shrink {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+  }
+}
+
+@keyframes shrink {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
+  }
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 2em;
+  width: 90%;
+  margin: 4em auto;
+}
+
+#project1 {
+  border: solid 5px #42bd9a;
+}
+
+#project2 {
+  border: solid 5px #41badb;
+}
+
+#project3 {
+  border: solid 5px #41badb;
+}
+
+#project4 {
+  border: solid 5px #42bd9a;
+}
+
+.projectCard1 svg {
+  width: 10%;
+  height: auto;
+}
+
+.projectCard1 .htmlLogo1 {
+  margin-left: 12em;
+  margin-top: 2em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard1 .htmlLogo1:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard1 .cssLogo1 {
+  margin-left: 1em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard1 .cssLogo1:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard1 .javascriptLogo1 {
+  margin-left: 1em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard1 .javascriptLogo1:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard2 {
+  position: relative;
+}
+
+.projectCard2 svg {
+  width: 10%;
+  height: auto;
+}
+
+.projectCard2 .reactLogo2 {
+  margin-top: 2em;
+  margin-left: 14em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard2 .reactLogo2:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard2 .cssLogo2 {
+  margin-left: 3em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard2 .cssLogo2:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard3 {
+  position: relative;
+}
+
+.projectCard3 svg {
+  width: 10%;
+  height: auto;
+}
+
+.projectCard3 .reactLogo3 {
+  margin-top: 2em;
+  margin-left: 14em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard3 .reactLogo3:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard3 .cssLogo3 {
+  margin-left: 3em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard3 .cssLogo3:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard4 {
+  position: relative;
+}
+
+.projectCard4 svg {
+  width: 10%;
+  height: auto;
+}
+
+.projectCard4 .reactLogo4 {
+  margin-top: 2em;
+  margin-left: 12em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard4 .reactLogo4:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard4 .railsLogo4 {
+  margin-left: 1em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard4 .railsLogo4:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.projectCard4 .cssLogo4 {
+  margin-left: 1em;
+  -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.projectCard4 .cssLogo4:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.hoverCard {
+  position: relative;
+}
+
+.hoverCard img {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.hoverCard:hover img {
+  opacity: 0.5;
+}
+
+.hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.hoverText::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1em;
+  background: #41badb;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.hoverText a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.hoverText:hover::after {
+  width: 100%;
+}
+
+.hoverCard:hover .hoverText {
+  opacity: 1;
+}
+
+#contactMe {
+  margin-top: 10em;
+  height: 40vh;
+}
+
+#contactMe h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.35em;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#contactMe h1::after {
+  content: "";
+  display: block;
+  width: 11%;
+  height: 0.1em;
+  margin-left: 44.5%;
+  background: #41badb;
+}
+
+#contactMe p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em auto 0 auto;
+  background: #333;
+  width: 40%;
+  height: 5em;
+  border-radius: 20em;
+}
+
+#contact svg {
+  fill: #fff;
+  margin: 0 2em;
+  -webkit-transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#contact svg:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  fill: #42bd9a;
+}
+
+footer {
+  background: #131313;
+  height: 150px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer p {
+  color: #fff;
+  font-size: 1.25em;
+}
+
+footer p span {
+  color: #42bd9a;
+  font-size: 1em;
+}
+
+#socialTags {
+  margin: 1em;
+}
+
+#socialTags svg {
+  margin: 0 1em;
+  height: 3em;
+  width: 3em;
+  fill: #fff;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+#socialTags svg:hover {
+  fill: #42bd9a;
+  -webkit-animation: socialBounce .8s linear infinite;
+          animation: socialBounce .8s linear infinite;
+}
+
+@-webkit-keyframes socialBounce {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes socialBounce {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+/*# sourceMappingURL=App.css.map */
