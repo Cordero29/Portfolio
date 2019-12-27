@@ -33,7 +33,7 @@ $secFont: "Montserrat", sans-serif;
     opacity: 0;
     color: #ffffff;
     text-shadow: 4px 3px 2px #000000, 4px 3px 2px #000000;
-    animation: intro 3s ease-out forwards 10.5s;
+    animation: intro 3s ease-out forwards 7.5s;
   }
 
   #bottomHeading {
@@ -41,12 +41,12 @@ $secFont: "Montserrat", sans-serif;
     font-weight: 200;
     color: #fff;
     position: absolute;
-    top: 68%;
-    left: 28%;
+    top: 65%;
+    left: 27%;
     font-size: 3em;
     opacity: 0;
     text-shadow: 4px 3px 2px #000000, 4px 3px 2px #000000;
-    animation: intro 3s ease-out forwards 10.5s;
+    animation: intro 3s ease-out forwards 7.5s;
   }
 
   @keyframes intro {
@@ -61,7 +61,7 @@ $secFont: "Montserrat", sans-serif;
   .svg {
     position: absolute;
     top: 36%;
-    left: 53%;
+    left: 49%;
     transform: translate(-50%, -50%);
   }
 
@@ -72,7 +72,7 @@ $secFont: "Montserrat", sans-serif;
     align-items: center;
     font-family: $secFont;
     position: absolute;
-    top: 80%;
+    top: 77%;
     left: 42%;
     font-size: 1.1em;
     background: transparent;
@@ -83,7 +83,7 @@ $secFont: "Montserrat", sans-serif;
     cursor: pointer;
     box-shadow: 6px 6px 6px #000000;
     transition: 250ms ease-out;
-    animation: button 2s ease-in forwards 10s;
+    animation: button 2s ease-in forwards 7s;
 
     &:hover {
       background: #50b5d2;
@@ -137,31 +137,31 @@ $secFont: "Montserrat", sans-serif;
 // ================================ First Name ==================================
 
 .firstName {
-  animation: firstNameFill 1s ease-out forwards 9.5s;
+  animation: firstNameFill 1s ease-out forwards 6s;
 }
 
 #firstH {
   stroke-dasharray: 21em;
   stroke-dashoffset: 21em;
-  animation: script 3s ease-out forwards 5.3s;
+  animation: script 2.5s ease-out forwards 2s;
 }
 
 #firstR {
   stroke-dasharray: 12em;
   stroke-dashoffset: 12em;
-  animation: script 3s ease-out forwards 5.6s;
+  animation: script 2.5s ease-out forwards 2.3s;
 }
 
 #firstI {
   stroke-dasharray: 11em;
   stroke-dashoffset: 11em;
-  animation: script 3s ease-out forwards 5.9s;
+  animation: script 2.5s ease-out forwards 2.6s;
 }
 
 #firstS {
   stroke-dasharray: 11em;
   stroke-dashoffset: 11em;
-  animation: script 3s ease-out forwards 6.2s;
+  animation: script 2.5s ease-out forwards 2.9s;
 }
 
 @keyframes firstNameFill {
@@ -176,43 +176,43 @@ $secFont: "Montserrat", sans-serif;
 // ================================ Last Name ==================================
 
 .lastName {
-  animation: lastNameFill 1s ease-out forwards 9.5s;
+  animation: lastNameFill 1s ease-out forwards 6s;
 }
 
 #firstLastO {
   stroke-dasharray: 12em;
   stroke-dashoffset: 12em;
-  animation: script 3s ease-out forwards 5.3s;
+  animation: script 2.5s ease-out forwards 2s;
 }
 
 #firstLastR {
   stroke-dasharray: 12em;
   stroke-dashoffset: 12em;
-  animation: script 3s ease-out forwards 5.6s;
+  animation: script 2.5s ease-out forwards 2.3s;
 }
 
 #lastD {
   stroke-dasharray: 17em;
   stroke-dashoffset: 17em;
-  animation: script 3s ease-out forwards 5.9s;
+  animation: script 2.5s ease-out forwards 2.6s;
 }
 
 #lastE {
   stroke-dasharray: 13em;
   stroke-dashoffset: 13em;
-  animation: script 3s ease-out forwards 6.2s;
+  animation: script 2.5s ease-out forwards 2.9s;
 }
 
 #secondLastR {
   stroke-dasharray: 12em;
   stroke-dashoffset: 12em;
-  animation: script 3s ease-out forwards 6.5s;
+  animation: script 2.5s ease-out forwards 3.2s;
 }
 
 #secondLastO {
   stroke-dasharray: 12em;
   stroke-dashoffset: 12em;
-  animation: script 3s ease-out forwards 6.8s;
+  animation: script 2.5s ease-out forwards 3.5s;
 }
 
 @keyframes lastNameFill {
@@ -232,63 +232,28 @@ $secFont: "Montserrat", sans-serif;
 
 // ================================ Line & First Letters ==================================
 
-#line {
-  transform: scale(0);
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: lineFlip 4s linear forwards;
+.line {
+  opacity: 0;
+  animation: lineFlip 2s linear forwards 6.5s;
 }
 
 @keyframes lineFlip {
-  0% {
-    transform: scale(0);
+  from {
+    opacity: 0;
   }
-  25% {
-    transform: scale(1);
-  }
-  35% {
-    transform: rotate(30deg);
-  }
-  40% {
-    transform: rotate(60deg);
-  }
-  45% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(120deg);
-  }
-  55% {
-    transform: rotate(150deg);
-  }
-  60% {
-    transform: rotate(180deg);
-  }
-  65% {
-    transform: rotate(210deg);
-  }
-  70% {
-    transform: rotate(240deg);
-  }
-  75% {
-    transform: rotate(280deg);
-  }
-  85% {
-    transform: rotate(310deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  to{
+    opacity: 1;
   }
 }
 
 #firstC {
   opacity: 0;
-  animation: appearance 2s linear forwards 4.2s;
+  animation: appearance 2s linear forwards;
 }
 
 #lastC {
   opacity: 0;
-  animation: appearance 2s linear forwards 4.2s;
+  animation: appearance 2s linear forwards;
 }
 
 @keyframes appearance {
@@ -520,6 +485,15 @@ header {
   grid-gap: 2em;
   width: 90%;
   margin: 4em auto;
+
+  h4 {
+    font-family: $primeFont;
+    font-weight: 600;
+    width: 95%;
+    text-align: justify;
+    margin: 0 auto .3em auto;
+    color: #333;
+  }
 }
 
 #project1 {
@@ -538,14 +512,30 @@ header {
   border: solid 5px $secColor;
 }
 
+@keyframes gitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .projectCard1 {
   svg {
     width: 10%;
     height: auto;
   }
 
+  .githubLogo1 {
+    margin-left: 10em;
+    width: 12%;
+    height: auto;
+
+    &:hover {
+      animation: socialBounce 600ms linear infinite;
+    }
+  }
+
   .htmlLogo1 {
-    margin-left: 12em;
+    margin-left: 1em;
     margin-top: 2em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -579,9 +569,19 @@ header {
     height: auto;
   }
 
+  .githubLogo2 {
+    margin-left: 12em;
+    width: 12%;
+    height: auto;
+
+    &:hover {
+      animation: socialBounce 600ms linear infinite;
+    }
+  }
+
   .reactLogo2 {
     margin-top: 2em;
-    margin-left: 14em;
+    margin-left: 2em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &:hover {
@@ -590,7 +590,7 @@ header {
   }
 
   .cssLogo2 {
-    margin-left: 3em;
+    margin-left: 2em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &:hover {
@@ -607,9 +607,20 @@ header {
     height: auto;
   }
 
+  .githubLogo3 {
+    margin-left: 12em;
+    width: 12%;
+    height: auto;
+
+    &:hover {
+      animation: socialBounce 600ms linear infinite;
+    }
+  }
+
+
   .reactLogo3 {
     margin-top: 2em;
-    margin-left: 14em;
+    margin-left: 2em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &:hover {
@@ -618,7 +629,7 @@ header {
   }
 
   .cssLogo3 {
-    margin-left: 3em;
+    margin-left: 2em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &:hover {
@@ -635,9 +646,20 @@ header {
     height: auto;
   }
 
+  .githubLogo4 {
+    margin-left: 10em;
+    width: 12%;
+    height: auto;
+
+    &:hover {
+      animation: socialBounce 600ms linear infinite;
+    }
+  }
+
+
   .reactLogo4 {
     margin-top: 2em;
-    margin-left: 12em;
+    margin-left: 1em;
     transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &:hover {
