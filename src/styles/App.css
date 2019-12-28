@@ -1086,7 +1086,7 @@ footer p span {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   * {
     overflow-x: hidden;
   }

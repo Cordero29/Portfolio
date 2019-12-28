@@ -884,7 +884,7 @@ footer {
 
 // PHONES
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   * {
     overflow-x: hidden;
   }
@@ -1003,7 +1003,7 @@ footer {
       }
     }
   }
-  
+
   #project3 {
     border: solid 5px $secColor;
   }
