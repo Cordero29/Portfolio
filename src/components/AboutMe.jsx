@@ -11,7 +11,6 @@ export default function AboutMe() {
           <img src={Headshot} width="55%" height="auto" alt="Me" />
           <h2>Christopher Cordero</h2>
         </div>
-
         <p>
           I am a Goal-oriented Software Engineer with a strong commitment to
           collaboration and solutions-oriented problem-solving. Use various web

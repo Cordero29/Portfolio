@@ -241,7 +241,7 @@ $secFont: "Montserrat", sans-serif;
   from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
@@ -491,7 +491,7 @@ header {
     font-weight: 600;
     width: 95%;
     text-align: justify;
-    margin: 0 auto .3em auto;
+    margin: 0 auto 0.3em auto;
     color: #333;
   }
 }
@@ -617,7 +617,6 @@ header {
     }
   }
 
-
   .reactLogo3 {
     margin-top: 2em;
     margin-left: 2em;
@@ -655,7 +654,6 @@ header {
       animation: socialBounce 600ms linear infinite;
     }
   }
-
 
   .reactLogo4 {
     margin-top: 2em;
@@ -698,8 +696,7 @@ header {
     opacity: 0.5;
   }
 }
-
-.hoverText {
+.hoverText1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -709,6 +706,35 @@ header {
   font-family: $primeFont;
   font-size: 2.5rem;
   color: #333;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.1em;
+    background: $primeColor;
+    transition: 250ms ease-out;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $primeFont;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.hoverText {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+  font-family: $primeFont;
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
 
   &::after {
     content: "";
@@ -726,14 +752,21 @@ header {
     color: #333;
     font-weight: 600;
   }
-
 }
 
 .hoverText:hover::after {
   width: 100%;
 }
 
+.hoverText1:hover::after {
+  width: 100%;
+}
+
 .hoverCard:hover .hoverText {
+  opacity: 1;
+}
+
+.hoverCard:hover .hoverText1 {
   opacity: 1;
 }
 
@@ -790,7 +823,6 @@ header {
   }
 }
 
-
 // ======================================= ^ Contact Me ^ ============================================
 
 // =========================================== Footer ================================================
@@ -817,7 +849,7 @@ footer {
 
 #socialTags {
   margin: 1em;
-  
+
   svg {
     margin: 0 1em;
     height: 3em;
@@ -827,9 +859,8 @@ footer {
 
     &:hover {
       fill: $secColor;
-      animation: socialBounce .8s linear infinite;
+      animation: socialBounce 0.8s linear infinite;
     }
-
   }
 }
 
@@ -847,11 +878,279 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
 // ========================================= ^ Footer ^ =============================================
+
+// ========================================= Media Query =============================================
+
+// PHONES
+
+@media only screen and (max-width: 400px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  .animation {
+    width: 100%;
+
+    #topHeading {
+      font-size: 2.5em;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #bottomHeading {
+      font-size: 2em;
+      width: 100%;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    button {
+      width: 50%;
+      position: absolute;
+      top: 75%;
+      left: 49%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .svg {
+    width: 310px;
+    height: auto;
+    opacity: 1;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    li {
+      font-size: 0.9em;
+      padding: 0.5em;
+    }
+  }
+
+  #aboutMe {
+    margin-top: 2em;
+
+    h1 {
+      font-size: 2.5em;
+
+      &::after {
+        width: 40%;
+        margin-left: 30%;
+      }
+    }
+
+    #profile {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2em;
+
+      #meSection {
+        h2 {
+          font-size: 1.5em;
+          padding-bottom: 0.5em;
+        }
+        img {
+          margin-top: 0.5em;
+        }
+      }
+
+      p {
+        margin-top: 1em;
+        width: 100%;
+        padding: 0.5em;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-align: center;
+        background-color: $primeColor;
+        color: #fff;
+      }
+    }
+  }
+
+  #skillsTitle {
+    margin-top: 1em;
+
+    &::after {
+      width: 30%;
+      margin-left: 35%;
+    }
+  }
+
+  .langLogo {
+    height: 10em;
+    svg {
+      margin: 1em;
+      width: 11%;
+      height: auto;
+    }
+  }
+
+  #portfolio {
+    margin-top: 1em;
+
+    h1 {
+      &::after {
+        width: 40%;
+        margin-left: 30%;
+      }
+    }
+  }
+  
+  #project3 {
+    border: solid 5px $secColor;
+  }
+  #project4 {
+    border: solid 5px $primeColor;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      font-size: 0.9em;
+    }
+  }
+
+  .projectCard1 {
+    margin-bottom: 1.5em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .1em;
+      background-image: linear-gradient(
+        90deg,
+        #181818,
+        15%,
+        rgb(76, 170, 196) 75%
+      );
+      margin: 1em auto;
+    }
+
+    .githubLogo1 {
+      margin-left: 4.5em;
+    }
+    .htmlLogo1 {
+      margin-top: 1em;
+    }
+  }
+  .projectCard2 {
+    margin-bottom: 1.5em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .1em;
+      background-image: linear-gradient(
+        90deg,
+        #181818,
+        15%,
+        rgb(76, 170, 196) 75%
+      );
+      margin: 1em auto;
+    }
+    .githubLogo2 {
+      margin-left: 5.5em;
+    }
+    .reactLogo2 {
+      margin-top: 1em;
+    }
+  }
+  .projectCard3 {
+    margin-bottom: 1.5em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .1em;
+      background-image: linear-gradient(
+        90deg,
+        #181818,
+        15%,
+        rgb(76, 170, 196) 75%
+      );
+      margin: 1em auto;
+    }
+    .githubLogo3 {
+      margin-left: 5.5em;
+    }
+    .reactLogo3 {
+      margin-top: 1em;
+    }
+  }
+  .projectCard4 {
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .1em;
+      background-image: linear-gradient(
+        90deg,
+        #181818,
+        15%,
+        rgb(76, 170, 196) 75%
+      );
+      margin: 1em auto;
+    }
+    .githubLogo4 {
+      margin-left: 5em;
+    }
+    .reactLogo4 {
+      margin-top: 1em;
+    }
+  }
+
+  .hoverText {
+    position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    a {
+      font-size: .8em;
+    }
+  }
+
+  .hoverText1 {
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    a {
+      font-size: .8em;
+    }
+  }
+
+  #contactMe {
+    margin-top: 2em;
+    h1 {
+      &::after {
+        width: 45%;
+        margin-left: 28%;
+      }
+    }
+  }
+
+  #contact {
+    width: 85%;
+  }
+}
+
+// ========================================= ^ Media Query ^ =============================================
+
+// TABLETS
+
+@media only screen and (max-width: 1050px) {
+}

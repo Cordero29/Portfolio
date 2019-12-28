@@ -21,7 +21,7 @@ export default function Portfolio() {
               height="auto"
               alt="spacex.surge.sh"
             />
-            <div className="hoverText">
+            <div className="hoverText1">
               <a
                 rel="noopener noreferrer"
                 href="http://spacexinfo.surge.sh/"

@@ -626,7 +626,7 @@ header ul {
   font-weight: 600;
   width: 95%;
   text-align: justify;
-  margin: 0 auto .3em auto;
+  margin: 0 auto 0.3em auto;
   color: #333;
 }
 
@@ -863,7 +863,7 @@ header ul {
   opacity: 0.5;
 }
 
-.hoverText {
+.hoverText1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -875,6 +875,39 @@ header ul {
   font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
   color: #333;
+}
+
+.hoverText1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1em;
+  background: #41badb;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.hoverText1 a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.hoverText {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
 }
 
 .hoverText::after {
@@ -899,7 +932,15 @@ header ul {
   width: 100%;
 }
 
+.hoverText1:hover::after {
+  width: 100%;
+}
+
 .hoverCard:hover .hoverText {
+  opacity: 1;
+}
+
+.hoverCard:hover .hoverText1 {
   opacity: 1;
 }
 
@@ -1007,8 +1048,8 @@ footer p span {
 
 #socialTags svg:hover {
   fill: #42bd9a;
-  -webkit-animation: socialBounce .8s linear infinite;
-          animation: socialBounce .8s linear infinite;
+  -webkit-animation: socialBounce 0.8s linear infinite;
+          animation: socialBounce 0.8s linear infinite;
 }
 
 @-webkit-keyframes socialBounce {
@@ -1042,6 +1083,233 @@ footer p span {
   75% {
     -webkit-transform: translateY(-5px);
             transform: translateY(-5px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    overflow-x: hidden;
+  }
+  .animation {
+    width: 100%;
+  }
+  .animation #topHeading {
+    font-size: 2.5em;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .animation #bottomHeading {
+    font-size: 2em;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .animation button {
+    width: 50%;
+    position: absolute;
+    top: 75%;
+    left: 49%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .svg {
+    width: 310px;
+    height: auto;
+    opacity: 1;
+  }
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  header li {
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+  #aboutMe {
+    margin-top: 2em;
+  }
+  #aboutMe h1 {
+    font-size: 2.5em;
+  }
+  #aboutMe h1::after {
+    width: 40%;
+    margin-left: 30%;
+  }
+  #aboutMe #profile {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2em;
+  }
+  #aboutMe #profile #meSection h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+  }
+  #aboutMe #profile #meSection img {
+    margin-top: 0.5em;
+  }
+  #aboutMe #profile p {
+    margin-top: 1em;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    background-color: #41badb;
+    color: #fff;
+  }
+  #skillsTitle {
+    margin-top: 1em;
+  }
+  #skillsTitle::after {
+    width: 30%;
+    margin-left: 35%;
+  }
+  .langLogo {
+    height: 10em;
+  }
+  .langLogo svg {
+    margin: 1em;
+    width: 11%;
+    height: auto;
+  }
+  #portfolio {
+    margin-top: 1em;
+  }
+  #portfolio h1::after {
+    width: 40%;
+    margin-left: 30%;
+  }
+  #project3 {
+    border: solid 5px #42bd9a;
+  }
+  #project4 {
+    border: solid 5px #41badb;
+  }
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects h4 {
+    font-size: 0.9em;
+  }
+  .projectCard1 {
+    margin-bottom: 1.5em;
+  }
+  .projectCard1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1em;
+    background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
+    background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
+    margin: 1em auto;
+  }
+  .projectCard1 .githubLogo1 {
+    margin-left: 4.5em;
+  }
+  .projectCard1 .htmlLogo1 {
+    margin-top: 1em;
+  }
+  .projectCard2 {
+    margin-bottom: 1.5em;
+  }
+  .projectCard2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1em;
+    background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
+    background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
+    margin: 1em auto;
+  }
+  .projectCard2 .githubLogo2 {
+    margin-left: 5.5em;
+  }
+  .projectCard2 .reactLogo2 {
+    margin-top: 1em;
+  }
+  .projectCard3 {
+    margin-bottom: 1.5em;
+  }
+  .projectCard3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1em;
+    background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
+    background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
+    margin: 1em auto;
+  }
+  .projectCard3 .githubLogo3 {
+    margin-left: 5.5em;
+  }
+  .projectCard3 .reactLogo3 {
+    margin-top: 1em;
+  }
+  .projectCard4::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1em;
+    background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
+    background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
+    margin: 1em auto;
+  }
+  .projectCard4 .githubLogo4 {
+    margin-left: 5em;
+  }
+  .projectCard4 .reactLogo4 {
+    margin-top: 1em;
+  }
+  .hoverText {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .hoverText a {
+    font-size: .8em;
+  }
+  .hoverText1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .hoverText1 a {
+    font-size: .8em;
+  }
+  #contactMe {
+    margin-top: 2em;
+  }
+  #contactMe h1::after {
+    width: 45%;
+    margin-left: 28%;
+  }
+  #contact {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=App.css.map */
