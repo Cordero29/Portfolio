@@ -17,7 +17,7 @@ export default function Header() {
           <a href="#contactMe">
             <li>Contact Me</li>
           </a>
-          <a rel="noopener noreferrer" href="https://docdro.id/TeE0qHU" target='_blank'>
+          <a rel="noopener noreferrer" href="https://docdro.id/bzsysvo" target='_blank'>
             <li>Resume</li>
           </a>
         </ul>
