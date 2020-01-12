@@ -818,7 +818,7 @@ header {
   }
 
   svg:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
     fill: $secColor;
   }
 }
@@ -829,7 +829,7 @@ header {
 
 footer {
   background: #131313;
-  height: 150px;
+  height: 125px;
   width: 100%;
   font-family: $primeFont;
   display: flex;
