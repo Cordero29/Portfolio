@@ -8,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+*:focus {
+  outline: none;
+}
+
 .animation {
   background-color: #131313;
   width: 100%;
@@ -114,10 +118,6 @@
 .animation button:hover .arrowBtn {
   -webkit-animation: bounce 0.8s linear infinite 0.1s, infiniteSpin 0.9s linear infinite 2.9s;
           animation: bounce 0.8s linear infinite 0.1s, infiniteSpin 0.9s linear infinite 2.9s;
-}
-
-.animation button:focus {
-  outline: none;
 }
 
 @-webkit-keyframes bounce {
@@ -550,9 +550,9 @@ header ul {
 }
 
 .langLogo svg {
-  width: 6.5%;
+  width: 6%;
   height: auto;
-  margin: 1.85em 2em;
+  margin: 2.25em 2em;
   -webkit-transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -946,7 +946,7 @@ header ul {
 
 #contactMe {
   margin-top: 10em;
-  height: 40vh;
+  height: 70vh;
 }
 
 #contactMe h1 {
@@ -966,41 +966,108 @@ header ul {
   background: #41badb;
 }
 
-#contactMe p {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 2em;
-}
-
-#contact {
+.form {
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 1em auto 0 auto;
-  background: #333;
-  width: 40%;
-  height: 5em;
-  border-radius: 20em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#contact svg {
-  fill: #fff;
-  margin: 0 2em;
-  -webkit-transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.form label {
+  color: #999;
+  font-family: "Raleway", sans-serif;
 }
 
-#contact svg:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  fill: #42bd9a;
+.form form {
+  margin: 2em auto;
+  padding: 1em;
+  width: 50em;
+}
+
+.form button {
+  margin-top: 2em;
+  width: 15%;
+  height: 3em;
+  border-radius: 6em;
+  border: none;
+  font-size: 0.8em;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  background: #222;
+  color: #41badb;
+  cursor: pointer;
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+}
+
+.form button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: solid 2px #41badb;
+  -webkit-animation: bounce 0.9s linear infinite 0.1s;
+          animation: bounce 0.9s linear infinite 0.1s;
+}
+
+#contactName {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-bottom: solid 1px #999;
+  width: 45%;
+  font-size: 1.3em;
+  padding: 0.5em;
+  -webkit-transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#contactName:focus {
+  border-bottom: solid 2px #41badb;
+  background: #222;
+  border-radius: 0.6em;
+  color: #eee;
+}
+
+#contactEmail {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-bottom: solid 1px #999;
+  width: 45%;
+  font-size: 1.3em;
+  padding: 0.5em;
+  margin-left: 10%;
+  -webkit-transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#contactEmail:focus {
+  border-bottom: solid 2px #41badb;
+  background: #222;
+  border-radius: 0.6em;
+  color: #eee;
+}
+
+#contactMessage {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-bottom: solid 1px #999;
+  width: 100%;
+  height: 10em;
+  font-size: 1.3em;
+  padding: 0.5em;
+  margin-top: 3em;
+  -webkit-transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#contactMessage:focus {
+  border-bottom: solid 2px #41badb;
+  background: #222;
+  border-radius: 0.6em;
+  color: #eee;
 }
 
 footer {
@@ -1011,30 +1078,23 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 footer p {
   color: #fff;
   font-size: 1.25em;
+  margin-left: 18em;
 }
 
 footer p span {
   color: #42bd9a;
   font-size: 1em;
-}
-
-#socialTags {
-  margin: 1em;
 }
 
 #socialTags svg {
@@ -1216,10 +1276,10 @@ footer p span {
     margin-bottom: 1.5em;
   }
   .projectCard1::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
-    height: .1em;
+    height: 0.1em;
     background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
     background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
     margin: 1em auto;
@@ -1234,10 +1294,10 @@ footer p span {
     margin-bottom: 1.5em;
   }
   .projectCard2::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
-    height: .1em;
+    height: 0.1em;
     background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
     background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
     margin: 1em auto;
@@ -1252,10 +1312,10 @@ footer p span {
     margin-bottom: 1.5em;
   }
   .projectCard3::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
-    height: .1em;
+    height: 0.1em;
     background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
     background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
     margin: 1em auto;
@@ -1267,10 +1327,10 @@ footer p span {
     margin-top: 1em;
   }
   .projectCard4::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
-    height: .1em;
+    height: 0.1em;
     background-image: -webkit-gradient(linear, left top, right top, from(#181818), color-stop(15%), color-stop(75%, #4caac4));
     background-image: linear-gradient(90deg, #181818, 15%, #4caac4 75%);
     margin: 1em auto;
@@ -1290,7 +1350,7 @@ footer p span {
     text-align: center;
   }
   .hoverText a {
-    font-size: .8em;
+    font-size: 0.8em;
   }
   .hoverText1 {
     position: absolute;
@@ -1300,7 +1360,7 @@ footer p span {
             transform: translate(-50%, -50%);
   }
   .hoverText1 a {
-    font-size: .8em;
+    font-size: 0.8em;
   }
   #contactMe {
     margin-top: 2em;
