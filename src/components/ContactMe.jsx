@@ -10,13 +10,13 @@ export default function ContactMe() {
                 id="contactName"
                 type="text"
                 name="name"
-                placeholder="Enter your name"
+                placeholder="Your name"
               />
               <input
                 id="contactEmail"
                 type="text"
                 name="_replyto"
-                placeholder="Enter your email address"
+                placeholder="Your email address"
               />
           <textarea
             id="contactMessage"

@@ -896,7 +896,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+
   p {
     color: #fff;
     font-size: 1.25em;
@@ -1204,6 +1204,24 @@ footer {
 
   #contact {
     width: 85%;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    p {
+      margin: 1em;
+    }
+  }
+
+  #socialTags {
+    margin-top: 1em;
+    svg {
+      width: 2.25em;
+      height: auto;
+    }
   }
 }
 
