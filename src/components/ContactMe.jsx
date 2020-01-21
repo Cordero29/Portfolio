@@ -5,7 +5,7 @@ export default function ContactMe() {
     <div id="contactMe">
       <h1>Contact Me</h1>
       <div className="form">
-        <form action="https://formspree.io/mvokrwnv" method="POST">
+        <form action="https://formspree.io/xknjypzp" method="POST">
               <input
                 id="contactName"
                 type="text"
